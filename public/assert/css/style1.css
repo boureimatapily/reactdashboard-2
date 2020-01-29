@@ -21,3 +21,6 @@ padding-left: 50px;
 table tr > td > button{
 		padding-left: 5px;
 }
+.btnpadding{
+	margin: 10px;
+}

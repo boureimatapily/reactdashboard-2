@@ -2,7 +2,6 @@ import React from 'react'
 import StartupDashboard from './StartupDashboard'
 import AllStartup from './AllStartup'
 
-
 const MainContent = () => {
     return (
         <div>
@@ -24,14 +23,10 @@ const MainContent = () => {
                                 <AllStartup />
                             </div>
                         </div>
-
                     </div>
                 </div>
-
-
             </div>
         </div>
     )
 }
-
 export default MainContent

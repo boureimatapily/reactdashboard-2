@@ -1,4 +1,27 @@
 import React from 'react'
+import Compagny from './Compagny'
+
+const companyData = [
+    {
+        companyName: 'comp1',
+        location: 'lagos',
+        market: 'Real state',
+        date:"Dec,15 2016"
+    },
+    {
+        companyName: 'comp2',
+        location: 'Accra',
+        market: 'Real state',
+        date:"Dec,12 2016"
+    },
+    {
+        companyName: 'comp3',
+        location: 'Bamako',
+        market: 'Real state',
+        date:"Dec,20 2016"
+    }
+]
+
 
 const AllStartup = () => {
     return (
@@ -18,57 +41,31 @@ const AllStartup = () => {
                             </form>
                         </div>
                         <div>
-                                <table className="table table-hover">
-                                   <tr>
-                                       <th>Compagny</th>
-                                       <th>Market/Industry</th>
-                                       <th>Location</th>
-                                       <th>Joined</th>
-                                       <th>Approve</th>
-                                       <th>Action</th>
-                                       
-                                   </tr>
-                                   <tr>
-                                       <td>Compagny Name</td>
-                                       <td>Real Estate</td>
-                                       <td>Lagos</td>
-                                       <td>Dec,12 2016</td>
-                                       <td>
-                                           <button type="button" className="btn btn-success"> <span className="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
-                                        </td>
-                                       <td>
-                                       <button type="button" className="btn btn-primary"> <span className="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
-                                       <button type="button" className="btn btn-danger"> <span className="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
-                                       </td>
-                                   </tr>
-                                   <tr>
-                                       <td>Compagny Name</td>
-                                       <td>Real Estate</td>
-                                       <td>Lagos</td>
-                                       <td>Dec,12 2016</td>
-                                       <td>
-                                           <button type="button" className="btn btn-success"> <span className="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
-                                        </td>
-                                       <td>
-                                       <button type="button" className="btn btn-primary"> <span className="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
-                                       <button type="button" className="btn btn-danger"> <span className="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
-                                       </td>
-                                   </tr>
-                                   <tr>
-                                       <td>Compagny Name</td>
-                                       <td>Real Estate</td>
-                                       <td>Lagos</td>
-                                       <td>Dec,12 2016</td>
-                                       <td>
-                                           <button type="button" className="btn btn-success"> <span className="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
-                                        </td>
-                                       <td>
-                                       <button type="button" className="btn btn-primary"> <span className="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
-                                       <button type="button" className="btn btn-danger"> <span className="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
-                                       </td>
-                                   </tr>
-                                </table>
+                            <table className="table">
+                                <tr>
+                                    <td>Compagny</td>
+                                    <td>Market/Industry</td>
+                                    <td>Location</td>
+                                    <td>Joined</td>
+                                    <td>Action</td>
+                                </tr>
+                                
+                            </table>
+                            <div className="compagnyitem">
+
+                                {
+                                    companyData.map(ent => (
+                                        <Compagny name={ent.companyName}
+                                         market={ent.market} 
+                                         location={ent.location} 
+                                         date={ent.date}
+                                         />
+
+                                    ))
+                                }
+
                             </div>
+                        </div>
                     </div>
                 </div>
             </div> {/* panel */}
