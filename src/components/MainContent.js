@@ -2,13 +2,14 @@ import React from 'react'
 import StartupDashboard from './StartupDashboard'
 import AllStartup from './AllStartup'
 
+
 const MainContent = () => {
     return (
         <div>
             <div className="container">                         
                 <div className="row"> {/* breadcrumb */}
                     <div className="col-lg-12">
-                        <ol class="breadcrumb breadcrumbheader">
+                        <ol className="breadcrumb breadcrumbheader">
                             <li><a href="#">Dashboard</a></li>
                         </ol>
                     </div>

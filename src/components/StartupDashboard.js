@@ -4,7 +4,7 @@ const StartupDashboard = () => {
     return (
         <div>
             <div className="list-group"> {/* dashboard list group */}
-                <a href="#" className="list-group-item active list-group-item list-group-item-danger">
+                <a href="#" className="list-group-item adddashboard">
                 <span className="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard
                 </a>
 

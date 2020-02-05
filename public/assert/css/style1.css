@@ -24,3 +24,18 @@ table tr > td > button{
 .btnpadding{
 	margin: 10px;
 }
+
+.panel-danger>.addstartuptitle
+	{
+    color:#fff;
+    background-color: #ea0b0b;
+    border-color: #ebccd1;
+}
+
+a.adddashboard {
+	background-color: red;
+	color: #fff;
+	font-size: 16px;
+}
+
+

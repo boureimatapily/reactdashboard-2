@@ -1,35 +1,18 @@
 import React from 'react'
 import Compagny from './Compagny'
 
-const companyData = [
-    {
-        companyName: 'comp1',
-        location: 'lagos',
-        market: 'Real state',
-        date:"Dec,15 2016"
-    },
-    {
-        companyName: 'comp2',
-        location: 'Accra',
-        market: 'Real state',
-        date:"Dec,12 2016"
-    },
-    {
-        companyName: 'comp3',
-        location: 'Bamako',
-        market: 'Real state',
-        date:"Dec,20 2016"
-    }
-]
 
+class AllStartup extends React.Component {
+   
 
-const AllStartup = () => {
+    render(){
+        
     return (
         <div>
 
             <div className="panel panel-danger"> {/*  panel */}
-                <div className="panel-heading">
-                    <h3 className="panel-title ">AllStartup</h3> {/* panel title */}
+                <div className="panel-heading addstartuptitle">
+                    <h3 className="panel-title">AllStartup</h3> {/* panel title */}
                 </div>
                 <div className="panel-body"> {/* panel body */}
                     <div className="searchbox"> {/* search box */}
@@ -41,28 +24,44 @@ const AllStartup = () => {
                             </form>
                         </div>
                         <div>
-                            <table className="table">
+                            <Compagny /> 
+                             {/* <table className="table table-striped tableitem">
+                                <tbody>
                                 <tr>
-                                    <td>Compagny</td>
-                                    <td>Market/Industry</td>
-                                    <td>Location</td>
-                                    <td>Joined</td>
-                                    <td>Action</td>
+                                    <th>Compagny</th>
+                                    <th>Market/Industry</th>
+                                    <th>Location</th>
+                                    <th>Joined</th>
+                                    <th>Action</th>
                                 </tr>
                                 
-                            </table>
-                            <div className="compagnyitem">
-
-                                {
-                                    companyData.map(ent => (
-                                        <Compagny name={ent.companyName}
-                                         market={ent.market} 
-                                         location={ent.location} 
-                                         date={ent.date}
-                                         />
-
-                                    ))
-                                }
+                               {
+                                    CompagnyData.map(ent => (
+                                    <tr key={ent.id}>
+                                    <td>{ent.compagnyName}</td>
+                                    <td>{ent.market}</td>
+                                    <td>{ent.location}</td>
+                                    <td>{ent.date}</td> 
+                                    <td>{
+                                        <button type="button" className="btn btn-primary"> 
+                                        <span className="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                                        </button>}
+                                        
+                                       { <button type="button" className="btn btn-danger btnpadding"> 
+                                        <span className="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                        </button>
+                                        }
+                                        </td>
+                                    </tr>
+                                    )  )
+                                }  
+                                
+                                </tbody>
+                            </table>  */}
+                            <div>
+                           
+ 
+                               
 
                             </div>
                         </div>
@@ -72,6 +71,7 @@ const AllStartup = () => {
 
         </div>
     )
+                            }
 }
 
 export default AllStartup
